@@ -10,7 +10,7 @@
 
 ## What it does
 
-It implements the most common pattern of mobile form user interaction by convension over configuration. You'll never have to worry again about scrolling and focusing form fields.
+It implements the most common pattern of mobile form user interaction by convention over configuration. You'll never have to worry again about scrolling and focusing form fields.
 
 - It uses inline form fields with icons and titles
 - It displays different icons for valid and invalid field values
@@ -33,7 +33,7 @@ It implements the most common pattern of mobile form user interaction by convens
 
 ## Support
 
-- React Native 0.20+
+- React Native 0.30+
 - iOS
 - Android (see installation below)
 
@@ -56,7 +56,8 @@ You should add `android:windowSoftInputMode="adjustNothing"` attribute to the `<
 #### The dirtiest example using React state
 
 ```js
-import React, { Component } from 'react-native'
+import React, { Component } from 'react'
+import { AppRegistry } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { StatelessForm, InlineTextInput } from 'react-native-stateless-form'
 
@@ -137,14 +138,14 @@ class Form extends Component {
   }
 }
 
-import { AppRegistry } from 'react-native'
 AppRegistry.registerComponent('Form', () => Form)
 ```
 
 #### Create your own widget to keep it DRY
 
 ```js
-import React, { Component, PropTypes } from 'react-native'
+import React, { Component, PropTypes } from 'react'
+import { AppRegistry } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { StatelessForm, InlineTextInput } from 'react-native-stateless-form'
 
@@ -237,14 +238,14 @@ class Form extends Component {
   }
 }
 
-import { AppRegistry } from 'react-native'
 AppRegistry.registerComponent('Form', () => Form)
 ```
 
 #### Usage with validate-model
 
 ```js
-import React, { Component, PropTypes } from 'react-native'
+import React, { Component, PropTypes } from 'react'
+import { AppRegistry } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { StatelessForm, InlineTextInput } from 'react-native-stateless-form'
 import { validate } from 'validate-model'
@@ -363,14 +364,14 @@ class Form extends Component {
   }
 }
 
-import { AppRegistry } from 'react-native'
 AppRegistry.registerComponent('Form', () => Form)
 ```
 
 #### Usage with Redux Form
 
 ```js
-import React, { Component, PropTypes } from 'react-native'
+import React, { Component, PropTypes } from 'react'
+import { AppRegistry } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { StatelessForm, InlineTextInput } from 'react-native-stateless-form'
 import { validateAll } from 'validate-model'
@@ -507,7 +508,6 @@ const Root = () => (
   </Provider>
 )
 
-import { AppRegistry } from 'react-native'
 AppRegistry.registerComponent('Form', () => Root)
 ```
 

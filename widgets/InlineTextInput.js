@@ -1,4 +1,5 @@
-import React, { Component, PropTypes, View, Text, TextInput } from 'react-native'
+import React, { Component, PropTypes } from 'react'
+import { View, Text, TextInput } from 'react-native'
 
 export default class InlineTextInput extends Component {
   componentDidMount() {
@@ -127,8 +128,8 @@ export default class InlineTextInput extends Component {
 }
 
 const stylePropType = PropTypes.oneOfType([
-  React.PropTypes.object,
-  React.PropTypes.arrayOf(React.PropTypes.object),
+  PropTypes.object,
+  PropTypes.arrayOf(PropTypes.object),
 ])
 
 InlineTextInput.propTypes = {
